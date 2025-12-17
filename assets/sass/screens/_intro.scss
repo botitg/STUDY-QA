@@ -1,0 +1,103 @@
+.intro {
+    padding: 0px 0px 74px 0px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../img/home/intro-bg.png');
+    @media (max-width: 575px) {
+        margin-top: 110px;
+    }
+    .bg {
+        position: absolute;
+        z-index: -1;
+    }
+    .frame-video {
+        position: sticky;
+        top: 120px;
+        border: 5px solid $white;
+        border-radius: 34px;
+        @media (max-width: 767px) {
+            width: 130px;
+            height: 180px;
+        }
+        @media (max-width: 991px) {
+            top: 170px;
+        }
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 220px;
+        align-items: flex-start;
+        @media (max-width: 767px) {
+            padding-left: 160px;
+        }
+        @media (max-width: 575px) {
+            padding-left: 0;
+        }
+        &__title {
+            @include title(700, $white);
+            width: 80%;
+            @media (max-width: 767px) {
+                font-size: 30px;
+            }
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 19px;
+            color: $white;
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &__text {
+                    font-weight: 700;
+                    width: 80%;
+                }
+            }
+            i {
+                color: $blue;
+                font-size: 18px;
+            }
+        }
+        &__btn {
+            position: relative;
+            padding: 15px 45px;
+            background: $gradient;
+            margin-top: 30px;
+            @include text(700, $white);
+            @media (max-width: 767px) {
+                padding: 10px 20px;
+            }
+            span {
+                color: rgb(171, 170, 170);
+                text-decoration: line-through;
+            }
+            .btn-frame {
+                position: absolute;
+                top: -25px;
+                right: -25px;
+                @media (max-width: 767px) {
+                    top: 25px;
+                }
+            }
+        }
+        &__link {
+            color: $white;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: 30px;
+            span {
+                font-weight: 700;
+                color: $light-blue;
+            }
+        }
+    }
+}

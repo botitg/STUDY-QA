@@ -1,0 +1,32 @@
+.start {
+    background-color: #fbfbfb;
+    padding: 60px 0;
+    &__content {
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            .title {
+                @include content(600, $gray);
+                span {
+                    color: $green;
+                }
+                width: 70%;
+               
+            }
+            .info {
+                
+                @include card-Title(500, $gray);
+            }
+            .desc {
+               
+                margin-top: 20px;
+            }
+            .text {
+               
+                width: 70%;
+            }
+        }
+    }
+}

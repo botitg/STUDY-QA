@@ -1,0 +1,60 @@
+@mixin title($weight, $color) {
+    font-weight: $weight;
+    color: $color;
+    font-size: 50px;
+
+    @media (max-width: 1199px) {
+        font-size: 42px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 38px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 30px;
+    }
+}
+@mixin content($weight, $color) {
+    font-weight: $weight;
+    color: $color;
+    font-size: 40px;
+
+    @media (max-width: 1199px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 24px;
+    }
+}
+@mixin card-Title($weight, $color) {
+    font-weight: $weight;
+    color: $color;
+    font-size: 22px;
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
+}
+@mixin text($weight, $color) {
+    font-weight: $weight;
+    color: $color;
+    font-size: 18px;
+
+    @media (max-width: 575px) {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,99 @@
+.header {
+    height: 100px;
+    background-color: $white;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    @media (max-width: 991px) {
+        height: 150px;
+    }
+    @media (max-width: 767px) {
+        height: 85px;
+    }
+    &__nav {
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+        align-items: center;
+        @media (max-width: 767px) {
+            justify-content: space-evenly;
+        }
+        .bars {
+            display: none;
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+        &__logo {
+            img {
+                width: 168px;
+                height: 51px;
+                @media (max-width: 767px) {
+                    width: 140px;
+                    height: 46px;
+                }
+            }
+        }
+        &__list {
+            display: flex;
+            gap: 23px;
+            flex-wrap: wrap;
+            @media (max-width: 767px) {
+                display: none;
+            }
+            .item {
+                &__link {
+                    color: $gray;
+                    font-family: 'Open Sans', sans-serif;
+                    position: relative;
+                }
+            }
+        }
+        &__wrap {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            @media (max-width: 767px) {
+                display: none;
+            }
+            .item-profile {
+                &__link {
+                    font-size: 18px;
+                    width: 50px;
+                    height: 50px;
+                    background: $gradient;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &__span {
+                        color: $white;
+                    }
+                }
+            }
+            .item {
+                display: flex;
+                gap: 10px;
+                position: relative;
+                font-size: 25px;
+                color: gray;
+                &::before {
+                    content: '';
+                    width: 40px;
+                    height: 1px;
+                    background-color: $gray;
+                    transform: rotate(90deg);
+                    position: absolute;
+                    right: -35px;
+                    top: 15px;
+                    transition: all 0.3s ease;
+                }
+                &__link {
+                    color: gray;
+                }
+            }
+        }
+    }
+}
