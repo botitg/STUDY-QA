@@ -1,0 +1,63 @@
+.work {
+    padding: 95px;
+    background-color: #effbff;
+    &__content {
+        display: flex;
+        gap: 45px;
+        align-items: center;
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+        &__img {
+            min-width: 300px;
+            flex: 1;
+            img {
+                width: 100%;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        &__el {
+            min-width: 300px;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+
+            .title {
+                @include content(700, $green);
+            }
+            .text {
+                @include card-Title(600, $gray);
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                i {
+                    font-size: 40px;
+                    color: $blue;
+                }
+            }
+            .list {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+                &__item {
+                    @include text(500, $black);
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    span {
+                        font-weight: 800;
+                    }
+                    i {
+                        font-size: 20px;
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}

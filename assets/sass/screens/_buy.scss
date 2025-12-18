@@ -1,0 +1,118 @@
+.buy {
+    padding: 100px 0;
+    background-image: url('../../img/home/buy-img1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        &__title {
+            @include content(700, $white);
+            text-align: center;
+            margin: 0 auto;
+            width: 70%;
+            span {
+                color: $light;
+            }
+        }
+        .frame {
+            width: 72px;
+            height: 12px;
+            margin: 0 auto;
+        }
+        &__main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 90px;
+            margin-top: 70px;
+            margin-bottom: 120px;
+            grid-template-areas:
+                'expert img'
+                'deal img'
+                'see dream';
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
+                gap: 40px;
+                grid-template-areas:
+                    'expert'
+                    'deal'
+                    'see'
+                    'img'
+                    'dream';
+            }
+            .card:nth-child(1) {
+                grid-area: expert;
+            }
+            .card:nth-child(2) {
+                grid-area: deal;
+                &:before {
+                    content: '';
+                    background-color: #4fbcff;
+                }
+            }
+            .card:nth-child(3) {
+                grid-area: see;
+            }
+            .card:nth-child(4) {
+                grid-area: img;
+                &::before {
+                    content: '';
+                    background-color: transparent;
+                }
+                @media (max-width: 575px) {
+                    .card__img {
+                        width: 350px;
+                        height: 200px;
+                    }
+                }
+            }
+            .card:nth-child(5) {
+                grid-area: dream;
+                &:before {
+                    content: '';
+                    background-color: #4fbcff;
+                }
+            }
+            .card {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 3px;
+                    height: 100%;
+                    background-color: #adff44;
+                    position: absolute;
+                    left: -15px;
+                    top: 25px;
+                }
+
+                &__title {
+                    @include card-Title(600, $white);
+                }
+                &__text {
+                    @include text(500, $white);
+                }
+            }
+        }
+        .btn {
+            background: linear-gradient(90deg, #0167b5 0%, #0296f0 100%);
+            padding: 16px 75px;
+            border-radius: 4px;
+            color: $white;
+            text-align: center;
+            margin: 0 auto;
+            @media (max-width: 767px) {
+                padding: 10px 20px;
+            }
+        }
+    }
+}

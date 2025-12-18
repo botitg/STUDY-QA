@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 110px;
     background-image: url('../../img/home/intro-bg.png');
     @media (max-width: 575px) {
         margin-top: 110px;
@@ -13,19 +14,20 @@
         z-index: -1;
     }
     .frame-video {
-        position: sticky;
-        top: 120px;
+        position: fixed;
+        top: 170px;
         border: 5px solid $white;
         border-radius: 34px;
+        z-index: 5;
+        left: 5px;
         @media (max-width: 767px) {
-            width: 130px;
-            height: 180px;
+            width: 100px;
+            height: 150px;
         }
-        @media (max-width: 991px) {
-            top: 170px;
-        }
+
         @media (max-width: 575px) {
-            display: none;
+            width: 90px;
+            height: 130px;
         }
     }
     &__content {
