@@ -206,7 +206,7 @@ li {
 }
 .intro .frame-video {
   position: fixed;
-  top: 170px;
+  bottom: 30px;
   border: 5px solid #ffffff;
   border-radius: 34px;
   z-index: 5;
@@ -996,13 +996,15 @@ li {
   color: #333333;
   font-size: 22px;
   padding: 20px;
-  border-bottom: 2px solid rgb(198, 198, 198);
   border-top: 2px solid rgb(198, 198, 198);
 }
 @media (max-width: 767px) {
   .guide__content .list__item__functions .list__item__btn {
     font-size: 20px;
   }
+}
+.guide__content .list__item__functions .list__item__btn:last-child {
+  border-bottom: 2px solid rgb(198, 198, 198);
 }
 .guide__content .list__item__functions .list__item__btn span {
   transition: all 0.3s ease;

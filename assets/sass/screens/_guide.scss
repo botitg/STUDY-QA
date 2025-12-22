@@ -41,7 +41,9 @@
                         justify-content: space-between;
                         @include card-Title(600, $gray);
                         padding: 20px;
-                        border-bottom: 2px solid rgb(198, 198, 198);
+                        &:last-child {
+                            border-bottom: 2px solid rgb(198, 198, 198);
+                        }
                         border-top: 2px solid rgb(198, 198, 198);
                         span {
                             transition: all 0.3s ease;
