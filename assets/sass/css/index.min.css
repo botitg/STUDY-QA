@@ -972,60 +972,62 @@ li {
     font-size: 20px;
   }
 }
-.guide__content__main {
-  width: 100%;
-}
-.guide__content__main .list {
+.guide__content .list {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 1px;
-}
-.guide__content__main .list__item {
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
+  margin: 0 auto;
   width: 100%;
 }
-.guide__content__main .list__item__btn {
-  padding: 15px 30px;
+.guide__content .list__item {
+  width: 100%;
+}
+.guide__content .list__item .list__item__functions[open] .list__item__btn span {
+  content: "-";
+  transform: rotate(180deg);
+  color: #0296F0;
+}
+.guide__content .list__item__functions .list__item__btn {
+  list-style-type: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background: transparent;
-  border-top: 2px solid #e0e0e0;
-  border-bottom: 2px solid #e0e0e0;
+  gap: 15px;
+  justify-content: space-between;
   font-weight: 600;
-  color: #4a4a4a;
+  color: #333333;
   font-size: 22px;
+  padding: 20px;
+  border-bottom: 2px solid rgb(198, 198, 198);
+  border-top: 2px solid rgb(198, 198, 198);
 }
 @media (max-width: 767px) {
-  .guide__content__main .list__item__btn {
+  .guide__content .list__item__functions .list__item__btn {
     font-size: 20px;
   }
 }
-.guide__content__main .list__item__btn:active + .list__item__functions {
-  display: block;
+.guide__content .list__item__functions .list__item__btn span {
+  transition: all 0.3s ease;
+  font-size: 35px;
+  font-weight: 200;
 }
-.guide__content__main .list__item__functions {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  display: none;
-}
-.guide__content__main .list__item__functions .info {
+.guide__content .list__item__functions .info {
   display: flex;
   gap: 10px;
+  align-items: center;
+  padding: 15px;
+  font-weight: 500;
+  color: #333333;
+  font-size: 18px;
 }
-.guide__content__main .list__item__functions .info:nth-child(3) {
-  margin-bottom: 20px;
+@media (max-width: 575px) {
+  .guide__content .list__item__functions .info {
+    font-size: 16px;
+  }
 }
-.guide__content__main .list__item__functions .info i {
+.guide__content .list__item__functions .info i {
   color: #83EA00;
 }
 .guide__content__btn {
-  background: linear-gradient(90deg, #0167B5 0%, #0296F0 100%);
+  background: linear-gradient(90deg, #0167b5 0%, #0296f0 100%);
   padding: 20px 75px;
   margin: 0 auto;
   border-radius: 4px;
