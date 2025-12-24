@@ -34,6 +34,10 @@
                 }
                 &__functions {
                     .list__item__btn {
+                        &:last-child {
+                            border-bottom: 2px solid rgb(198, 198, 198);
+                        }
+                        border-top: 2px solid rgb(198, 198, 198);
                         list-style-type: none;
                         display: flex;
                         align-items: center;
@@ -41,10 +45,7 @@
                         justify-content: space-between;
                         @include card-Title(600, $gray);
                         padding: 20px;
-                        &:last-child {
-                            border-bottom: 2px solid rgb(198, 198, 198);
-                        }
-                        border-top: 2px solid rgb(198, 198, 198);
+
                         span {
                             transition: all 0.3s ease;
                             font-size: 35px;
